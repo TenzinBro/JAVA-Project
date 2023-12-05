@@ -60,9 +60,7 @@ public class EmployeeManagementStage extends Stage {
 
         Button deleteButton = new Button("Delete Employee");
         deleteButton.setOnAction(e -> {
-            // Implement logic to delete an employee
-            // You can show a list of employees and let users select one to delete
-            // Example: Deleting the first employee for simplicity
+            
             if (!employeeManagementSystem.getEmployees().isEmpty()) {
                 employeeManagementSystem.deleteEmployee(employeeManagementSystem.getEmployees().get(0));
             }
