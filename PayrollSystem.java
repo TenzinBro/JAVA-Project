@@ -24,7 +24,7 @@ public class PayrollSystem implements Serializable {
             // Deduct taxes
             double taxedPay = deductTaxes(totalPay);
 
-            // You can update the Employee object or do something with the calculated payroll
+            
             System.out.println("Employee ID: " + employee.getId() +
                     ", Name: " + employee.getName() +
                     ", Total Pay: " + taxedPay);
@@ -32,7 +32,7 @@ public class PayrollSystem implements Serializable {
     }
 
     private double calculateOvertimePay(Employee employee) {
-        // Assuming overtime is paid at 1.5 times the hourly rate for hours worked beyond 40 hours per week
+        // overtime is paid at 1.5 times the hourly rate for hours worked beyond 40 hours per week
         double standardHours = 40;
         if (employee.getHoursWorked() > standardHours) {
             double overtimeHours = employee.getHoursWorked() - standardHours;
@@ -42,16 +42,16 @@ public class PayrollSystem implements Serializable {
     }
 
     private double calculateBonus(Employee employee) {
-        // Sample logic for bonus calculation (replace with your own criteria)
+        //
         if (employee.getHoursWorked() > 45) {
-            return 100; // Bonus amount in this example
+            return 100; // Bonus amount
         }
         return 0;
     }
 
     private double deductTaxes(double totalPay) {
-        // Sample logic for tax deduction (replace with your own tax calculation method)
-        double taxRate = 0.2; // 20% tax rate in this example
+        //  tax deduction 
+        double taxRate = 0.2; // 20% tax rate 
         return totalPay * (1 - taxRate);
     }
 }
